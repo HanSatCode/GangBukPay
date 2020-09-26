@@ -6,14 +6,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: #ffffff;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-h1{
+h1 {
     color: white;
     font-size: 60px;
     letter-spacing: 5px;
@@ -21,6 +20,7 @@ h1{
     text-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Black Han Sans', sans-serif;
     background: linear-gradient(to right, #7f00ff, #e100ff);
+    animation: Gradients 10s ease-in-out infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -33,7 +33,9 @@ h1{
     font-size: 15px;
     border: 2px solid transparent;
     background: linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(to right, #7f00ff, #e100ff) border-box;
+    linear-gradient(to right, #7f00ff, #e100ff, #7f00ff) border-box;
+    transition: 0.6s ease;
+    background-size: 200%;
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
     padding: 14px 10px;
     width: 270px;
@@ -42,16 +44,15 @@ h1{
     border-radius: 999px
 }
 
-input::placeholder{
-    font-family: 'Nanum Gothic', sans-serif;
-    background: linear-gradient(to right, #7f00ff, #e100ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.box input[type = "text"]:focus{
+    background-position: right;
+
 }
 
-input::placeholder:hover{
+input::placeholder{
     font-family: 'Nanum Gothic', sans-serif;
-    background: rgba(0, 0, 0, 0);
+    font-size: 15px;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -65,13 +66,19 @@ input::placeholder:hover{
     letter-spacing: 2px;
     font-size: 13px;
     color: white;
-    background: linear-gradient(to right, #7f00ff, #e100ff);
+    background: linear-gradient(to right, #7f00ff, #e100ff, #7f00ff);
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
     padding: 14px 10px;
     width: 200px;
     height: 40px;
     outline: none;
-    border-radius: 999px
+    border-radius: 999px;
+    transition: 0.6s ease;
+    background-size:200%
+}
+
+.box button:hover {
+    background-position: right;
 }
 
 .caption {
