@@ -2,19 +2,18 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>강북페이 - 로그인</title>
+    <title>강북페이 - 시작하기</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
 <body>
-    <div class="box" action="index.html" method="post">
+    <div class="box">
         <h1>강북페이</h1>
-        <input type="text" id="name" name="사용자이름" placeholder="사용자 이름">
-        <button type="submit" id="login" name="로그인">로그인</button>
+        <input type="text" id="name" name="사용자이름" placeholder="사용자 이름" maxlength="10">
+        <button type="button" id="start" name="시작하기" onclick="payStart()">시작하기</button>
     </div>
     <div class="caption">
-        <a class="caption" href="account-sign.html">아직 계정이 없으신가요?</a><br>
         <a href="https://github.com/HanSatCode/GangBukPay"><img src="img/Github.png"></a>
     </div>
 </body>
