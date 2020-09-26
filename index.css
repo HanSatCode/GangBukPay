@@ -23,7 +23,6 @@ h1{
     background: linear-gradient(to right, #7f00ff, #e100ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .box input[type = "text"]{
