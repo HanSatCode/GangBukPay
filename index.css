@@ -5,7 +5,7 @@ body {
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    backgroudn: #ffffff;
+    background: #ffffff;
     text-align: center;
 }
 
@@ -15,25 +15,27 @@ body {
 
 h1{
     color: white;
-    font-size: 70px;
-    letter-spacing: 10px;
+    font-size: 60px;
+    letter-spacing: 5px;
     font-weight: normal;
-    text-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Black Han Sans', sans-serif;
     background: linear-gradient(to right, #7f00ff, #e100ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 .box input[type = "text"]{
-    border: 0;
+    font-family: 'Nanum Gothic', sans-serif;
     display: block;
     margin: 30px auto;
     text-align: center;
+    font-size: 15px;
     border: 2px solid transparent;
     background: linear-gradient(#ffffff, #ffffff) padding-box,
     linear-gradient(to right, #7f00ff, #e100ff) border-box;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
     padding: 14px 10px;
     width: 270px;
     height: 50px;
@@ -48,17 +50,24 @@ input::placeholder{
     -webkit-text-fill-color: transparent;
 }
 
+input::placeholder:hover{
+    font-family: 'Nanum Gothic', sans-serif;
+    background: rgba(0, 0, 0, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .box button{
     font-family: 'Nanum Gothic', sans-serif;
     border: 0;
     display: block;
-    margin: 50px auto;
+    margin: 20px auto;
     text-align: center;
-    letter-spacing: 5px;
-    font-size: 12px;
+    letter-spacing: 2px;
+    font-size: 13px;
     color: white;
     background: linear-gradient(to right, #7f00ff, #e100ff);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
     padding: 14px 10px;
     width: 200px;
     height: 40px;
@@ -66,3 +75,27 @@ input::placeholder{
     border-radius: 999px
 }
 
+.caption {
+    margin-top: 20px;
+    text-align: center;
+}
+.caption a{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    text-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.caption img{
+    margin-top: 20px;
+}
+
+footer{
+    margin-top: 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 5px;
+    color: #cdcdcd;
+}
