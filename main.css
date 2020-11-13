@@ -2,7 +2,10 @@
     font-family: 'GmarketSansLight';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
 }
-
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -25,15 +28,11 @@ header {
 h3{
     font-size: 35px;
     font-family: 'GmarketSansBold';
-    font-weight: 400;
-    background: linear-gradient(to right, #7f00ff, #e100ff);
-    background-size: 100%;
-    -webkit-background-clip: text;
+    color: black;
     -webkit-text-fill-color: transparent;
 }
 
 .info{
-    
     background: linear-gradient(to right, #7f00ff, #e100ff);
     color: white;
     height: 200px;
@@ -42,15 +41,92 @@ h3{
 
 #titleName{
     text-align: center;
-    letter-spacing: 1px;
     font-weight: normal;
     font-size: 15px;
-    font-family: 'GmarketSansLight', sans-serif;
+    font-family: 'GmarketSansMedium', sans-serif;
 }
 
 #titleResult{
     text-align: center;
-    font-size: 50px;
+    font-size: 55px;
     font-family: 'GmarketSansBold';
     font-weight: bold;
+}
+
+.schedule {
+    font-family: 'GmarketSansMedium', sans-serif;
+    position: relative;
+    color: black;
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+    padding: 14px 10px;
+    width: 130px;
+    height: 130px;
+    outline: none;
+    border-radius: 25px;
+    background-size:200%
+}
+
+.code {
+    font-family: 'GmarketSansMedium', sans-serif;
+    position: relative;
+    color: black;
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+    padding: 14px 10px;
+    width: 130px;
+    height: 130px;
+    outline: none;
+    border-radius: 25px;
+    background-size:200%
+}
+
+.gotcha {
+    font-family: 'GmarketSansMedium', sans-serif;
+    color: black;
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+    padding: 14px 10px;
+    width: 130px;
+    height: 130px;
+    outline: none;
+    border-radius: 25px;
+    background-size:200%
+}
+
+.setting {
+    font-family: 'GmarketSansMedium', sans-serif;
+    color: black;
+    border: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+    padding: 14px 10px;
+    width: 130px;
+    height: 130px;
+    outline: none;
+    border-radius: 25px;
+    background-size:200%
 }
