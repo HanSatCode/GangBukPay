@@ -18,6 +18,8 @@ function getCookie(cName) {
     return unescape(cValue);
 } //쿠키 판별
 
+var userName =  "name";
+
 var checkUserSign = getCookie("userSign");
 if (checkUserSign == "True") {
     location.replace("main.html");
@@ -35,7 +37,8 @@ function payStart() {
         if (warnAgree) {
             location.replace("main.html");
             setCookie("userSign", "True", 9999);
-            setCookie("userName", objName, 9999);
+            userName = document.getElementById('name').value;
+            setCookie("userName", userName, 9999);
         } else {
             setCookie("userSign", "False", 9999);
         }
