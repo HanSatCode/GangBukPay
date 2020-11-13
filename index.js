@@ -18,26 +18,45 @@ function getCookie(cName) {
     return unescape(cValue);
 } //쿠키 판별
 
-var checkUserSign = getCookie("userSign");
-if (checkUserSign == "True") {
-    location.replace("main.html");
-}
+var checkCoupon1 = getCookie("coupon1");
 
-function payStart() {
-    var objName = document.getElementById("name");
+
+function useCode() {
+    var objName = document.getElementById("code");
     if (objName.value == "") {
-        alert("시작하실 사용자의 이름이나 닉네임을 입력해 주세요.");
+        alert("등록하실 쿠폰 코드를 입력해주세요.");
         objName.focus();
         return;
     }
-    if (objName.value != "") {
-        var warnAgree = confirm("한 번 설정한 이름은 초기화하지 않는 이상 절대로 바꿀 수 없으며, 프라이빗 브라우저를 사용하시거나 인터넷 사용 기록 삭제를 하시면 지금까지 진행했던 활동은 영원히 삭제됩니다! 계속 진행하시겠어요?");
-        if (warnAgree) {
-            location.replace("main.html");
-            setCookie("userSign", "True", 9999);
-            setCookie("userName", objName, 9999);
-        } else {
-            setCookie("userSign", "False", 9999);
+
+    if (objName.value == "1234") {
+        if (checkCoupon1 == "True") {
+                alert("어라, 이미 등록된 쿠폰이네요. 다른 쿠폰을 사용해주세요.");
+        }
+        else {
+
+        alert("지갑에 100GB(이)가 적립되었습니다.");
+        setCookie("coupon1", "True", 9999);
+        location.replace("coupon.html");
+        return;
         }
     }
+
+    else {
+        alert("코드 등록에 실패했습니다. 틀린 것이 없는지 살펴보신 후 정확하게 입력해주세요.");
+        return;
+    }
 }
+
+function resetStart() {
+    var resetYN = confirm("계속 진행하시면 지금까지 모은 정보들은 삭제됩니다 ! 한 번 지운 데이터는 다시 복구 하실 수 없고 영원히 삭제됩니다 ! 그래도 진행하시겠어요?");
+
+    if (resetYN== true){
+        setCookie("userSign", 0, -1);
+        setCookie("userName", 0, -1);
+        alert("계정 삭제를 완료했습니다. 초기 로그인 화면으로 넘어갑니다.");
+        location.replace("index.html");
+    }
+    else {
+    }
+} // 초기화 세션
