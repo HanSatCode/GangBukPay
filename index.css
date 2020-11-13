@@ -1,5 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&display=swap');
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+}
 * {margin : 0; padding: 0; box-sizing: border-box;}
+
 body {
     position: absolute;
     top:50%;
@@ -17,7 +33,7 @@ h6{
     letter-spacing: 0px;
     font-weight: normal;
     text-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'GmarketSansMedium', sans-serif;
     background: linear-gradient(to right, #7f00ff, #e100ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -26,11 +42,11 @@ h6{
 
 h1 {
     color: white;
-    font-size: 60px;
-    letter-spacing: 5px;
+    font-size:60px;
+    letter-spacing: 2px;
     font-weight: normal;
     text-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'GmarketSansBold', sans-serif;
     background: linear-gradient(to right, #7f00ff, #e100ff, #7f00ff, #e100ff);
     background-size: 300%;
     -webkit-background-clip: text;
@@ -46,7 +62,7 @@ h1 {
 }
 
 .box input[type = "text"]{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'GmarketSansMedium', sans-serif;
     display: block;
     margin: 30px auto;
     text-align: center;
@@ -70,7 +86,7 @@ h1 {
 }
 
 input::placeholder{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'GmarketSansMedium', sans-serif;
     font-size: 15px;
     background: linear-gradient(to right, #7f00ff, #e100ff);
     -webkit-background-clip: text;
@@ -78,7 +94,7 @@ input::placeholder{
 }
 
 .box button{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'GmarketSansMedium', sans-serif;
     border: 0;
     display: block;
     margin: 20px auto;
@@ -106,7 +122,7 @@ input::placeholder{
     text-align: center;
 }
 .caption a{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'GmarketSansLight', sans-serif;
     font-size: 15px;
     background: linear-gradient(to right, #7f00ff, #e100ff);
     -webkit-background-clip: text;
@@ -121,7 +137,7 @@ input::placeholder{
 
 footer{
     margin-top: 30px;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'GmarketSansLight', sans-serif;
     font-size: 5px;
     color: #cdcdcd;
 }
