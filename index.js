@@ -18,11 +18,22 @@ function getCookie(cName) {
     return unescape(cValue);
 } //쿠키 판별
 
-var checkCoupon1 = getCookie("coupon1");
+var checkUserResult = getCookie("userResult");
+var checkUserName = getCookie("userName");
 
+var checkCoupon1 = getCookie("coupon1");
+var checkCoupon2 = getCookie("coupon2");
+
+var result = 0;
+
+window.onload = function (){
+    document.getElementById("titleName").innerText = "안녕하세요 '" + checkUserName + "' 님!";
+        document.getElementById("titleResult").innerText = checkUserResult + "GB";
+}
 
 function useCode() {
     var objName = document.getElementById("code");
+
     if (objName.value == "") {
         alert("등록하실 쿠폰 코드를 입력해주세요.");
         objName.focus();
@@ -36,7 +47,24 @@ function useCode() {
         else {
 
         alert("지갑에 100GB(이)가 적립되었습니다.");
+        result += Number(checkUserResult);
+        setCookie("userResult", result + 100, 9999);
         setCookie("coupon1", "True", 9999);
+        location.replace("coupon.html");
+        return;
+        }
+    }
+
+    if (objName.value == "abcd") {
+        if (checkCoupon2 == "True") {
+                alert("어라, 이미 등록된 쿠폰이네요. 다른 쿠폰을 사용해주세요.");
+        }
+        else {
+
+        alert("지갑에 250GB(이)가 적립되었습니다.");
+        result += Number(checkUserResult);
+        setCookie("userResult", result + 250, 9999);
+        setCookie("coupon2", "True", 9999);
         location.replace("coupon.html");
         return;
         }
@@ -54,6 +82,10 @@ function resetStart() {
     if (resetYN== true){
         setCookie("userSign", 0, -1);
         setCookie("userName", 0, -1);
+        setCookie("userResult", 0, -1);
+        setCookie("resultBackup", 0, -1);
+        setCookie("coupon1", 0, -1);
+        setCookie("coupon2", 0, -1);
         alert("계정 삭제를 완료했습니다. 초기 로그인 화면으로 넘어갑니다.");
         location.replace("index.html");
     }
