@@ -31,6 +31,17 @@ window.onload = function (){
         document.getElementById("titleResult").innerText = checkUserResult + "GB";
 }
 
+function scrollDisable(){
+    $('html, body').addClass('hidden');
+}
+
+
+function scrollDisable(){
+    $('body').addClass('scrollDisable').on('scroll touchmove mousewheel', function(e){
+        e.preventDefault();
+    });
+}
+
 function useCode() {
     var objName = document.getElementById("code");
 
