@@ -10,6 +10,16 @@
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
 }
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
 
 * {margin : 0; padding: 0; box-sizing: border-box;}
 
@@ -27,12 +37,13 @@ header {
 
 body{
     overflow: hidden;
+    -webkit-animation: fadein 1s;
 }
+
 h3{
     font-size: 35px;
     font-family: 'GmarketSansBold';
     color: black;
-    -webkit-text-fill-color: transparent;
     justify-content: center;
     align-items: center;
 }
@@ -40,13 +51,17 @@ h3{
 .info{
     background: linear-gradient(to right, #7f00ff, #e100ff);
     color: white;
-    height: 200px;
+    height: 250px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .info-text{
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: 10px;
+    padding: 75px;
 }
 
 #titleName{
@@ -75,15 +90,14 @@ h3{
     color: black;
     border: 0;
     display: block;
-    margin: 20px;
-    padding: 20px 20px;
+    margin: 30px 20px; padding: 20px;
+    width: 150px;
+    height: 150px;
     text-align: center;
     letter-spacing: 3px;
     font-size: 15px;
     background-color: white;
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    height: 150px;
     outline: none;
     border-radius: 25px;
     background-size:200%
@@ -95,8 +109,7 @@ h3{
     color: black;
     border: 0;
     display: block;
-    margin: 20px;
-    padding: 20px 20px;
+    margin: 30px 20px; padding: 20px;
     width: 150px;
     height: 150px;
     text-align: center;
@@ -114,8 +127,7 @@ h3{
     color: black;
     border: 0;
     display: block;
-    margin: 20px;
-    padding: 20px 20px;
+    margin: 30px 20px; padding: 20px;
     width: 150px;
     height: 150px;
     text-align: center;
@@ -133,8 +145,7 @@ h3{
     color: black;
     border: 0;
     display: block;
-    margin: 25px;
-    padding: 20px 20px;
+    margin: 30px 20px; padding: 20px;
     width: 150px;
     height: 150px;
     text-align: center;
