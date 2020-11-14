@@ -28,7 +28,7 @@ var result = 0;
 
 window.onload = function (){
     document.getElementById("titleName").innerText = "안녕하세요 '" + checkUserName + "' 님!";
-        document.getElementById("titleResult").innerText = checkUserResult + "GB";
+    document.getElementById("titleResult").innerText = checkUserResult + "GB";
 }
 
 function scrollDisable(){
