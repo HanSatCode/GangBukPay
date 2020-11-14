@@ -39,6 +39,7 @@ function payStart() {
             setCookie("userSign", "True", 9999);
             userName = document.getElementById('name').value;
             setCookie("userName", userName, 9999);
+            setCookie("userResult", 0, 9999);
         } else {
             setCookie("userSign", "False", 9999);
         }
