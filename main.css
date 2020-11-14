@@ -10,7 +10,7 @@
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
 }
-@-webkit-keyframes fadein {
+@keyframes fadein {
     from {
         opacity:0;
     }
@@ -37,7 +37,7 @@ header {
 
 body{
     overflow: hidden;
-    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
 }
 
 h3{
@@ -49,13 +49,21 @@ h3{
 }
 
 .info{
-    background: linear-gradient(to right, #7f00ff, #e100ff);
+    background: linear-gradient(to right, #7f00ff, #e100ff, #7f00ff, #e100ff);
+    background-size: 300%;
     color: white;
     height: 250px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
+    animation: Gradients 10s infinite;
+    animation-direction: initial;
+}
+
+@keyframes Gradients {
+    0%{background-position:left}
+    100%{background-position:right}
 }
 
 .info-text{
