@@ -32,6 +32,7 @@ function payStart() {
         objName.focus();
         return;
     }
+
     if (objName.value != "") {
         var warnAgree = confirm("한 번 설정한 이름은 계정을 제거하지 않는 이상 절대로 바꿀 수 없으며, 프라이빗 브라우저를 사용하시거나 인터넷 사용 기록 삭제를 하시면 지금까지 진행했던 활동은 영원히 삭제됩니다! 계속 진행하시겠어요?");
         if (warnAgree) {
@@ -43,5 +44,20 @@ function payStart() {
         } else {
             setCookie("userSign", "False", 9999);
         }
+    }
+
+    if (objName.value == "시멈") {
+        var warnAgree = confirm("한 번 설정한 이름은 계정을 제거하지 않는 이상 절대로 바꿀 수 없으며, 프라이빗 브라우저를 사용하시거나 인터넷 사용 기록 삭제를 하시면 지금까지 진행했던 활동은 영원히 삭제됩니다! 계속 진행하시겠어요?");
+        if (warnAgree) {
+            location.replace("main.html");
+            setCookie("userSign", "True", 9999);
+            userName = document.getElementById('name').value;
+            setCookie("userName", userName, 9999);
+        } else {
+            setCookie("userSign", "False", 9999);
+        }
+    }
+
+    else {
     }
 }
