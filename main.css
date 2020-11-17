@@ -92,6 +92,7 @@ h3{
     display: flex;
     justify-content: center;
     align-content: center;
+    padding-top: 10px;
 }
 
 .schedule {
