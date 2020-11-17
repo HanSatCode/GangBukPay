@@ -28,6 +28,7 @@
 }
 
 header {
+    padding-top: 5px;
     text-align: center;
     background: white;
     width: 100%;
@@ -38,6 +39,7 @@ header {
 body{
     overflow: hidden;
     animation: fadein 1s;
+    background-color: white;
 }
 
 h3{
@@ -61,7 +63,7 @@ h3{
     animation-direction: initial;
 }
 
-@keyframes Gradients {
+@-webkit-keyframes Gradients {
     0%{background-position:left}
     100%{background-position:right}
 }
@@ -75,7 +77,7 @@ h3{
 #titleName{
     text-align: center;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'GmarketSansMedium', sans-serif;
 }
 
@@ -164,4 +166,9 @@ h3{
     outline: none;
     border-radius: 25px;
     background-size:200%
+}
+
+img {
+    margin-top: 15px;
+    width: 60%;
 }
