@@ -21,8 +21,16 @@ function getCookie(cName) {
 var checkUserResult = getCookie("userResult");
 var checkUserName = getCookie("userName");
 
-var checkCoupon1 = getCookie("coupon1");
-var checkCoupon2 = getCookie("coupon2");
+var checkCoupon01 = getCookie("coupon01");
+var checkCoupon02 = getCookie("coupon02");
+var checkCoupon03 = getCookie("coupon03");
+var checkCoupon04 = getCookie("coupon04");
+var checkCoupon05 = getCookie("coupon05");
+var checkCoupon06 = getCookie("coupon06");
+var checkCoupon07 = getCookie("coupon07");
+var checkCoupon08 = getCookie("coupon08");
+var checkCoupon09 = getCookie("coupon09");
+var checkCoupon10 = getCookie("coupon10");
 
 var result = 0;
 
@@ -52,7 +60,7 @@ function useCode() {
     }
 
     if (objName.value == "1234") {
-        if (checkCoupon1 == "True") {
+        if (checkCoupon01 == "True") {
                 alert("어라, 이미 등록된 쿠폰이네요. 다른 쿠폰을 사용해주세요.");
         }
         else {
@@ -60,14 +68,14 @@ function useCode() {
         alert("지갑에 100GB(이)가 적립되었습니다.");
         result += Number(checkUserResult);
         setCookie("userResult", result + 100, 9999);
-        setCookie("coupon1", "True", 9999);
+        setCookie("coupon01", "True", 9999);
         location.replace("coupon.html");
         return;
         }
     }
 
     if (objName.value == "abcd") {
-        if (checkCoupon2 == "True") {
+        if (checkCoupon02 == "True") {
                 alert("어라, 이미 등록된 쿠폰이네요. 다른 쿠폰을 사용해주세요.");
         }
         else {
@@ -75,7 +83,7 @@ function useCode() {
         alert("지갑에 250GB(이)가 적립되었습니다.");
         result += Number(checkUserResult);
         setCookie("userResult", result + 250, 9999);
-        setCookie("coupon2", "True", 9999);
+        setCookie("coupon02", "True", 9999);
         location.replace("coupon.html");
         return;
         }
@@ -87,28 +95,40 @@ function useCode() {
     }
 }
 
+
+
+
 function resetStart() {
-    var resetYN = confirm("계속 진행하시면 지금까지 모은 정보들은 삭제됩니다! 한 번 지운 데이터는 영원히 복구하실 수 없습니다! 그래도 진행하시겠어요?");
+    var resetYN = confirm("계속 진행하시면 지금까지 진행했던 데이터는 삭제됩니다! 한 번 지운 데이터는 영원히 복구하실 수 없으며, 일정 시간 동안 계정을 생성하실 수 없습니다!");
 
     if (resetYN== true){
-        var realResetYN = prompt('경고. 계정을 삭제하게 되면 워런티에 카운트가 가해집니다! 워런티에 카운트가 가해지게 되면 일정 시간 동안 계정을 생성하실 수 없습니다! 기술 문제로 인해 사용이 불가능한 경우, 프로그래밍 부서를 방문해 주세요. 이를 이해하시고 계정을 삭제하시려면, "계정을 삭제합니다"(을)를 입력해 주세요.', '');
+        var realResetYN = prompt("정말로 삭제하시려면 '비활성화'(을)를 입력해 주세요.", '');
 
-        if (realResetYN== "계정을 삭제합니다"){
+        if (realResetYN== "비활성화"){
+            setCookie("userWarranty", "True", 1);
             setCookie("userSign", 0, -1);
             setCookie("userName", 0, -1);
             setCookie("userResult", 0, -1);
             setCookie("resultBackup", 0, -1);
-            setCookie("coupon1", 0, -1);
-            setCookie("coupon2", 0, -1);
-            alert("계정 삭제를 완료했습니다. 초기 로그인 화면으로 넘어갑니다.");
+            setCookie("coupon01", 0, -1);
+            setCookie("coupon02", 0, -1);
+            setCookie("coupon03", 0, -1);
+            setCookie("coupon03", 0, -1);
+            setCookie("coupon04", 0, -1);
+            setCookie("coupon05", 0, -1);
+            setCookie("coupon06", 0, -1);
+            setCookie("coupon07", 0, -1);
+            setCookie("coupon08", 0, -1);
+            setCookie("coupon09", 0, -1);
+            setCookie("coupon10", 0, -1);
+            alert("계정이 성공적으로 비활성화 되었습니다. 초기 계정생성 페이지로 이동합니다.");
             location.replace("index.html");
         }
 
         else {
-            alert("계정 삭제를 취소하였습니다.");
+            alert("계정 비활성화를 취소하였습니다.");
         }
     }
-
     else {
     }
 } // 초기화 세션
