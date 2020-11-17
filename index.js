@@ -88,18 +88,27 @@ function useCode() {
 }
 
 function resetStart() {
-    var resetYN = confirm("계속 진행하시면 지금까지 모은 정보들은 삭제됩니다 ! 한 번 지운 데이터는 다시 복구 하실 수 없고 영원히 삭제됩니다 ! 그래도 진행하시겠어요?");
+    var resetYN = confirm("계속 진행하시면 지금까지 모은 정보들은 삭제됩니다! 한 번 지운 데이터는 영원히 복구하실 수 없습니다! 그래도 진행하시겠어요?");
 
     if (resetYN== true){
-        setCookie("userSign", 0, -1);
-        setCookie("userName", 0, -1);
-        setCookie("userResult", 0, -1);
-        setCookie("resultBackup", 0, -1);
-        setCookie("coupon1", 0, -1);
-        setCookie("coupon2", 0, -1);
-        alert("계정 삭제를 완료했습니다. 초기 로그인 화면으로 넘어갑니다.");
-        location.replace("index.html");
+        var realResetYN = prompt('경고. 계정을 삭제하게 되면 워런티에 카운트가 가해집니다! 워런티에 카운트가 가해지게 되면 일정 시간 동안 계정을 생성하실 수 없습니다! 기술 문제로 인해 사용이 불가능한 경우, 프로그래밍 부서를 방문해 주세요. 이를 이해하시고 계정을 삭제하시려면, "계정을 삭제합니다"(을)를 입력해 주세요.', '');
+
+        if (realResetYN== "계정을 삭제합니다"){
+            setCookie("userSign", 0, -1);
+            setCookie("userName", 0, -1);
+            setCookie("userResult", 0, -1);
+            setCookie("resultBackup", 0, -1);
+            setCookie("coupon1", 0, -1);
+            setCookie("coupon2", 0, -1);
+            alert("계정 삭제를 완료했습니다. 초기 로그인 화면으로 넘어갑니다.");
+            location.replace("index.html");
+        }
+
+        else {
+            alert("계정 삭제를 취소하였습니다.");
+        }
     }
+
     else {
     }
 } // 초기화 세션
