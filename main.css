@@ -28,12 +28,11 @@
 }
 
 header {
-    padding-top: 5px;
+    padding-top: 8px;
     text-align: center;
     background: white;
     width: 100%;
     height: 50px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9);
 }
 
 body{
@@ -43,7 +42,7 @@ body{
 }
 
 h3{
-    font-size: 35px;
+    font-size: 30px;
     font-family: 'GmarketSansBold';
     color: black;
     justify-content: center;
@@ -95,7 +94,7 @@ h3{
     padding-top: 10px;
 }
 
-.schedule {
+.calendar {
     font-family: 'GmarketSansMedium', sans-serif;
     position: relative;
     color: black;
@@ -114,7 +113,7 @@ h3{
     background-size:200%
 }
 
-.code {
+.coupon {
     font-family: 'GmarketSansMedium', sans-serif;
     position: relative;
     color: black;
@@ -169,7 +168,22 @@ h3{
     background-size:200%
 }
 
-img {
+.calendar img {
+    margin-top: 15px;
+    width: 60%;
+}
+
+.gotcha img {
+    margin-top: 13px;
+    width: 65%;
+}
+
+.coupon img {
+    margin-top: 12px;
+    width: 65%;
+}
+
+.setting img {
     margin-top: 15px;
     width: 60%;
 }
