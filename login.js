@@ -1,3 +1,9 @@
+var agent = navigator.userAgent.toLowerCase();
+if (agent.indexOf("safari") != -1) {
+  alert("IOS(Safari)를 사용 중이시네요. 일부 기능에 제한이 있을 수 있어요.");
+  alert("알려진 문제 점 # 이름이 올바르게 표시 안 되는 것");
+}
+
 var setCookie = function(name, value, exp) {
     var date = new Date();
     date.setTime(date.getTime() + exp*24*60*60*1000);
@@ -40,7 +46,7 @@ function payStart() {
             setCookie("userSign", "True", 9999);
             userName = document.getElementById('name').value;
             setCookie("userName", userName, 9999);
-            setCookie("userResult", 1234567890, 9999);
+            setCookie("userResult", 123456, 9999);
         } else {
             setCookie("userSign", "False", 9999);
         }
