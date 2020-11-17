@@ -48,3 +48,10 @@ h3{
     justify-content: center;
     align-items: center;
 }
+
+img{
+    height: 3%;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
