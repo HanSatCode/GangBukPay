@@ -19,8 +19,6 @@
     }
 }
 
-
-
 * {margin : 0; padding: 0; box-sizing: border-box;}
 
 ::-webkit-scrollbar {
@@ -47,4 +45,11 @@ h3{
     color: black;
     justify-content: center;
     align-items: center;
+}
+
+img{
+    height: 5%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
 }
