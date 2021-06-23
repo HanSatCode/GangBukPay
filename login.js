@@ -1,3 +1,12 @@
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+} else {
+    alert("PC 환경으로 접속하신 것 같네요. 일부 기능이나 UI 등은 최적화되어있지 않을 수 있어요.");
+}
+
 var setCookie = function(name, value, exp) {
     var date = new Date();
     date.setTime(date.getTime() + exp*24*60*60*1000);
