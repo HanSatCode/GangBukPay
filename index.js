@@ -2,7 +2,7 @@ var setCookie = function(name, value, exp) {
     var date = new Date();
     date.setTime(date.getTime() + exp*24*60*60*1000);
     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
-}; // 쿠키 제작
+};
 
 function getCookie(cName) {
     cName = cName + '=';
@@ -16,7 +16,7 @@ function getCookie(cName) {
         cValue = cookieData.substring(start, end);
     }
     return unescape(cValue);
-} //쿠키 판별
+}
 
 var checkUserResult = getCookie("userResult");
 var checkUserName = getCookie("userName");
